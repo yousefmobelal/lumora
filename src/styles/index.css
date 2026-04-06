@@ -1,0 +1,61 @@
+@import "./fonts.css";
+@import "tailwindcss";
+@plugin "tailwind-scrollbar";
+
+@theme {
+  --font-mono: "B612Mono", sans-serif;
+  --font-cinzel: "CinzelDecorative", sans-serif;
+  --font-ma-shan-zheng: "MaShanZheng", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-tenor: "TenorSans", sans-serif;
+  --font-yeseva: "YesevaOne", sans-serif;
+  --color-accent1: #e4935d;
+  --color-accent2: #beaba1;
+  --color-accent3: #c47642;
+  --color-off-white: #f8ece5;
+  --color-caption: #7d7873;
+  --color-body: #514f4d;
+  --color-grey-strong: #272625;
+  --color-grey-medium: #9d9995;
+  --color-white: #ffffff;
+  --color-black: #1e1b18;
+}
+
+@layer base {
+  h1 {
+    @apply font-yeseva text-7xl font-medium text-center leading-15 text-white tracking-wider;
+  }
+  h2 {
+    @apply font-raleway text-sm font-medium text-center leading-10 text-white tracking-widest;
+  }
+  p {
+    @apply text-start font-raleway  font-light leading-relaxed;
+  }
+
+  p.style-first-char {
+    @apply first-letter:text-accent3 first-letter:text-6xl first-letter:font-cinzel first-letter:float-left first-letter:mr-2 first-letter:leading-none;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .col-center {
+    @apply flex flex-col justify-center items-center;
+  }
+  .abs-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .abs-top {
+    @apply absolute top-13 left-1/2 -translate-x-1/2;
+  }
+}
+
+.circle-btn {
+  @apply size-10 rounded-full flex justify-center items-center bg-grey-strong cursor-pointer p-1.5 hover:bg-grey-medium/50 transition-colors duration-500;
+}
