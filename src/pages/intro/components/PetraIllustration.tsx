@@ -91,22 +91,30 @@ const PetraIllustration: React.FC<PetraIllustrationProps> = ({
         id="petra-moon"
         src={Moon}
         alt="Moon"
-        className="absolute left-1/2 top-13  -translate-x-30"
+        className="absolute left-1/2 top-0  -translate-x-30"
       />
       <div className="absolute w-full h-full top-0 z-10">
-        <DraggableIllustration onDragEnd={onDragEnd} image={Petra} />
-        <img
-          id="petra-fg-left"
-          src={ForegroundLeft}
-          alt="Petra Foreground Left"
-          className="absolute left-30 h-full"
+        <DraggableIllustration
+          onDragEnd={onDragEnd}
+          image={Petra}
+          wrapperClass="w-[100vh] max-w-[1400px] left-1/2 -translate-x-1/2"
+          imageClass="w-full h-auto absolute top-8"
         />
-        <img
-          id="petra-fg-right"
-          src={ForegroundRight}
-          alt="Petra Foreground Right"
-          className="absolute right-30 h-full"
-        />
+
+        <div className="h-screen w-screen  absolute gap-[20vw] flex items-center justify-center overflow-hidden pointer-events-none">
+          <img
+            id="petra-fg-left"
+            src={ForegroundLeft}
+            alt="Petra Foreground Left"
+            className="h-full"
+          />
+          <img
+            id="petra-fg-right"
+            src={ForegroundRight}
+            alt="Petra Foreground Right"
+            className="h-full"
+          />
+        </div>
       </div>
       <img
         src={Cloud}
