@@ -65,7 +65,6 @@ const WonderArtifacts = () => {
         const step = `${sign}=${STEP_REM}rem`;
         const exitShift = `${sign}=20`;
 
-        // The next title text — resolved at click time via the ref
         const nextIndex =
           (firstHighlightIdIndexRef.current + direction + TOTAL_ITEMS) %
           TOTAL_ITEMS;
@@ -83,7 +82,6 @@ const WonderArtifacts = () => {
               isAnimatingRef.current = false;
             },
           })
-          // ── cards ──────────────────────────────────────────────
           .to(exitId, { x: exitShift, opacity: 0 })
           .to(exitId, { x: totalShift })
           .to(card1Id, { x: step, bottom: 0 }, "<")
@@ -99,17 +97,10 @@ const WonderArtifacts = () => {
           )
           .to(enterId, { x: step, bottom: getBottomPosition(3) }, "<")
           .to(exitId, { opacity: 1 })
-          // ── title out (slides opposite to navigation direction) ─
-          .to(
-            titleEl,
-            { x: `${sign}=40`, opacity: 0, duration: 0.25 },
-            "<", // starts with the card shift phase
-          )
-          // swap the text mid-transition while it's invisible
+          .to(titleEl, { x: `${sign}=40`, opacity: 0, duration: 0.25 }, "<")
           .call(() => {
             if (titleEl) titleEl.textContent = nextTitle;
           })
-          // ── title in (slides in from the opposite side) ─────────
           .fromTo(
             titleEl,
             { x: `${oppositeSign}=40`, opacity: 0 },

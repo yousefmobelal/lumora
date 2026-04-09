@@ -38,7 +38,6 @@ const DraggableIllustration = ({
         const dir = deltaX < 0 ? "left" : "right";
         onDragEnd(dir);
       },
-      bounds: "#img-wrapper",
     });
   });
   return (

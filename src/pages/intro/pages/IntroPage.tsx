@@ -154,7 +154,7 @@ const IntroPage = () => {
         </Link>
       </div>
 
-      <div className="absolute top-1/2 flex justify-between w-full px-[15%] z-100">
+      <div className="absolute top-1/2 flex justify-between w-full px-5 md:px-[15%] z-100">
         <button className="circle-btn" onClick={handlePrevious}>
           <img src={PreviousArrow} alt="" />
         </button>

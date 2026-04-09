@@ -31,18 +31,21 @@ const WonderDetails = () => {
       },
     });
 
-    const wonderImages = gsap.utils.toArray(".wonder-image");
-    const totalScroll = (wonderImages.length - 1) * 390;
-    gsap.to("#wonder-images", {
-      x: -totalScroll,
-      ease: "none",
-      scrollTrigger: {
-        trigger: "#wonder-images-wrapper",
-        start: "top 5%",
-        end: `+=${totalScroll}`,
-        scrub: 1,
-        pin: true,
-      },
+    const mm = gsap.matchMedia();
+    mm.add("(min-width: 768px)", () => {
+      const container = document.querySelector("#wonder-images-wrapper");
+      const totalScroll = container!.scrollWidth - window.innerWidth;
+      gsap.to("#wonder-images", {
+        x: -totalScroll,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#wonder-images-wrapper",
+          start: "top 5%",
+          end: `+=${totalScroll + 20}`,
+          scrub: 1,
+          pin: true,
+        },
+      });
     });
 
     const firstParaSplit = SplitText.create("#wonder-history-info", {
@@ -194,7 +197,7 @@ const WonderDetails = () => {
       <div className="mt-15 col-center">
         <div className="flex-center">
           <div className="wonder-divider-line h-px w-80 bg-black" />
-          <span className="mx-5 uppercase text-white font-raleway">
+          <span className="mx-5 uppercase text-white font-raleway text-nowrap">
             {wonder.subTitle}
           </span>
           <div className="wonder-divider-line h-px w-80 bg-black" />
@@ -208,7 +211,10 @@ const WonderDetails = () => {
       </div>
 
       <div id="wonder-images-wrapper" className="w-full overflow-hidden mt-10">
-        <div id="wonder-images" className="ps-20 h-150 flex gap-1">
+        <div
+          id="wonder-images"
+          className="md:ps-20 md:h-150 flex md:flex-row flex-col md:gap-1 "
+        >
           {wonder.galleryImages.map((imgSrc, index) => (
             <div
               key={index}
@@ -225,7 +231,10 @@ const WonderDetails = () => {
         </div>
       </div>
 
-      <div id="wonder-info" className="bg-off-white pt-20 pb-50 text-body">
+      <div
+        id="wonder-info"
+        className="bg-off-white pt-20 pb-50 max-md:px-5 text-body"
+      >
         <div className="max-w-3xl mx-auto space-y-10">
           <p id="wonder-history-info" className="style-first-char">
             {wonder.historyInfo1}
@@ -255,7 +264,7 @@ const WonderDetails = () => {
           <iframe
             title="Petra Map"
             src={`https://www.google.com/maps?q=${wonder.lat},${wonder.lng}&output=embed`}
-            className="w-full h-[400px] border-0 rounded-lg"
+            className="w-full h-100 border-0 rounded-lg"
             loading="lazy"
             allowFullScreen
           ></iframe>

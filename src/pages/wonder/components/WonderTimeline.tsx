@@ -68,12 +68,12 @@ const WonderTimeline = () => {
   }, []);
 
   return (
-    <div className="bg-black h-screen w-full ps-50 pe-10 pt-20 overflow-hidden">
+    <div className="bg-black h-screen w-full px-5 pt-10 md:ps-50 md:pe-10 md:pt-20 overflow-hidden">
       <div className="grid h-full grid-cols-1 md:grid-cols-2 gap-6">
         <div className="col-center">
           <div
             id="wonder-img"
-            className="relative h-90 w-90 flex justify-center items-end"
+            className="relative h-60 md:h-90 w-90 flex justify-center items-end"
           >
             <div className="h-full w-50 rounded-t-full overflow-hidden">
               <img

@@ -14,8 +14,8 @@ const WonderNavigationBar = () => {
   const wonderId = location.pathname.split("/")[2];
   const wonder = wondersData.find((w) => w.id === wonderId) || wondersData[0];
   return (
-    <div className="w-18 rounded-tr-4xl h-screen bg-white top-0 left-0 z-10 fixed">
-      <div className="pt-50 pb-30 flex flex-col items-center justify-around h-full w-full absolute top-0">
+    <div className="md:w-18 md:h-screen w-screen h-18 max-md:bottom-0 md:top-0 md:left-0 z-10 fixed bg-white md:rounded-tr-4xl">
+      <div className="max-md:pl-20 md:pt-50 md:pb-30 flex flex-row md:flex-col items-center justify-around h-full w-full absolute max-md:bottom-0 md:top-0">
         <WonderNavigationItem
           tabIndex={0}
           Image={TabEditorial}
@@ -38,7 +38,7 @@ const WonderNavigationBar = () => {
 
       <Link
         to="/"
-        className="size-18 rounded-full overflow-hidden border-6 border-white absolute top-20 left-2"
+        className="size-18 rounded-full overflow-hidden border-6 border-white absolute max-md:bottom-2 left-4 md:top-20 md:left-2"
         style={{
           backgroundColor: wonderColors.bgColor(wonder.id),
         }}

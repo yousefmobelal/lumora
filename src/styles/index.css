@@ -23,7 +23,7 @@
 
 @layer base {
   h1 {
-    @apply font-yeseva text-7xl font-medium text-center leading-15 text-white tracking-wider;
+    @apply font-yeseva text-6xl md:text-7xl font-medium text-center leading-15 text-white tracking-wider;
   }
   h2 {
     @apply font-raleway text-sm font-medium text-center leading-10 text-white tracking-widest;

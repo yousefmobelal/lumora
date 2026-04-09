@@ -98,20 +98,31 @@ const PyramidsIllustration: React.FC<PyramidsIllustrationProps> = ({
         alt="Moon"
         className="absolute left-1/2 top-13  translate-x-20"
       />
-      <div className="absolute w-full h-full top-0 z-10">
-        <DraggableIllustration onDragEnd={onDragEnd} image={Pyramids} />
-        <img
-          id="pyramids-fg-back"
-          src={ForegroundBack}
-          alt="Pyramids Foreground Back"
-          className="absolute bottom-0 -right-50 h-1/2"
+      <div className="absolute w-screen h-full top-0 z-10 overflow-hidden">
+        <DraggableIllustration
+          onDragEnd={onDragEnd}
+          image={Pyramids}
+          wrapperClass="w-[120vh] max-w-[1400px] left-1/2 -translate-x-1/2"
+          imageClass="w-full h-auto"
         />
-        <img
-          id="pyramids-fg-front"
-          src={ForegroundFront}
-          alt="Pyramids Foreground Front"
-          className="absolute bottom-0 h-1/2"
-        />
+
+        <div className="w-[170vh] md:h-1/2 absolute bottom-10 md:translate-x-1/2">
+          <img
+            id="pyramids-fg-back"
+            src={ForegroundBack}
+            alt="Pyramids Foreground Back"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+
+        <div className="w-[150vh] md:h-1/2 absolute bottom-10 md:-translate-x-[10vh]  max-md:-translate-x-1/3">
+          <img
+            id="pyramids-fg-front"
+            src={ForegroundFront}
+            alt="Pyramids Foreground Front"
+            className="w-full h-auto object-contain"
+          />
+        </div>
       </div>
 
       <div className="absolute h-full w-full top-0 left-0">
