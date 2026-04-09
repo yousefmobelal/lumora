@@ -100,19 +100,23 @@ const GreatWallIllustration: React.FC<GreatWallIllustrationProps> = ({
       />
       <div className="absolute w-full h-full top-0 z-10">
         <DraggableIllustration onDragEnd={onDragEnd} image={GreatWall} />
-        <img
-          id="great-wall-fg-left"
-          src={ForegroundLeft}
-          alt="Great Wall Foreground Left"
-          className="h-125 absolute -bottom-50 left-50"
-        />
-        <img
-          id="great-wall-fg-right"
-          src={ForegroundRight}
-          alt="Great Wall Foreground Right"
-          className="h-150 absolute -bottom-40 right-30"
-        />
+
+        <div className="flex items-center justify-center w-full gap-0 md:gap-[10vw] absolute -bottom-50">
+          <img
+            id="great-wall-fg-left"
+            src={ForegroundLeft}
+            alt="Great Wall Foreground Left"
+            className="h-125 mt-20"
+          />
+          <img
+            id="great-wall-fg-right"
+            src={ForegroundRight}
+            alt="Great Wall Foreground Right"
+            className="h-150"
+          />
+        </div>
       </div>
+
       <div className="absolute h-full w-full top-0 left-0">
         <img
           src={Roller2}
