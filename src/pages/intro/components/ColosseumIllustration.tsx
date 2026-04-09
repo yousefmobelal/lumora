@@ -97,18 +97,20 @@ const ColosseumIllustration: React.FC<ColosseumIllustrationProps> = ({
           imageClass="w-150"
         />
 
-        <img
-          id="colosseum-fg-left"
-          src={ForegroundLeft}
-          alt="Colosseum Foreground Left"
-          className="h-125 absolute -bottom-15 left-70 "
-        />
-        <img
-          id="colosseum-fg-right"
-          src={ForegroundRight}
-          alt="Colosseum Foreground Right"
-          className="h-150 absolute -bottom-40 right-50 "
-        />
+        <div className="w-screen absolute -bottom-15 flex items-center justify-center gap-0 md:gap-[15vw] pointer-events-none">
+          <img
+            id="colosseum-fg-left"
+            src={ForegroundLeft}
+            alt="Colosseum Foreground Left"
+            className="h-115 mt-30"
+          />
+          <img
+            id="colosseum-fg-right"
+            src={ForegroundRight}
+            alt="Colosseum Foreground Right"
+            className="h-120 mt-40"
+          />
+        </div>
       </div>
       <div className="absolute h-full w-full top-0 left-0">
         <img

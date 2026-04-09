@@ -101,7 +101,7 @@ const GreatWallIllustration: React.FC<GreatWallIllustrationProps> = ({
       <div className="absolute w-full h-full top-0 z-10">
         <DraggableIllustration onDragEnd={onDragEnd} image={GreatWall} />
 
-        <div className="flex items-center justify-center w-full gap-0 md:gap-[10vw] absolute -bottom-50">
+        <div className="flex items-center justify-center w-full gap-0 md:gap-[10vw] absolute -bottom-50 pointer-events-none">
           <img
             id="great-wall-fg-left"
             src={ForegroundLeft}
