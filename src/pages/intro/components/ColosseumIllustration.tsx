@@ -1,9 +1,9 @@
 import Colosseum from "@/assets/images/colosseum/colosseum.png";
-import Roller1 from "@/assets/images/_common/texture/roller-1-white.gif";
+import Roller1 from "@/assets/images/common/texture/roller-1-white.gif";
 import ForegroundLeft from "@/assets/images/colosseum/foreground-left.png";
 import ForegroundRight from "@/assets/images/colosseum/foreground-right.png";
 import Sun from "@/assets/images/colosseum/sun.png";
-import Cloud from "@/assets/images/_common/cloud-white.svg";
+import Cloud from "@/assets/images/common/cloud-white.svg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useImperativeHandle, useRef } from "react";

@@ -1,5 +1,5 @@
-import PreviousArrow from "@/assets/images/_common/icons/icon-back.png";
-import NextArrow from "@/assets/images/_common/icons/icon-next-large.png";
+import PreviousArrow from "@/assets/images/common/icons/icon-back.png";
+import NextArrow from "@/assets/images/common/icons/icon-next-large.png";
 import { ChevronDown } from "lucide-react";
 
 import GreatWallIllustration from "../components/GreatWallIllustration";

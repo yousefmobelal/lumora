@@ -1,9 +1,9 @@
-import TabEditorialActive from "@/assets/images/_common/tab-editorial-active.png";
-import TabEditorial from "@/assets/images/_common/tab-editorial.png";
-import TabTimelineActive from "@/assets/images/_common/tab-timeline-active.png";
-import TabTimeline from "@/assets/images/_common/tab-timeline.png";
-import TabArtifactsActive from "@/assets/images/_common/tab-artifacts-active.png";
-import TabArtifacts from "@/assets/images/_common/tab-artifacts.png";
+import TabEditorialActive from "@/assets/images/common/tab-editorial-active.png";
+import TabEditorial from "@/assets/images/common/tab-editorial.png";
+import TabTimelineActive from "@/assets/images/common/tab-timeline-active.png";
+import TabTimeline from "@/assets/images/common/tab-timeline.png";
+import TabArtifactsActive from "@/assets/images/common/tab-artifacts-active.png";
+import TabArtifacts from "@/assets/images/common/tab-artifacts.png";
 import WonderNavigationItem from "./WonderNavigationItem";
 import { Link, useLocation } from "react-router-dom";
 import { wonderColors } from "@/lib/utils/wonder-colors";

@@ -1,9 +1,9 @@
 import GreatWall from "@/assets/images/great_wall_of_china/great-wall.png";
-import Roller2 from "@/assets/images/_common/texture/roller-2-white.gif";
+import Roller2 from "@/assets/images/common/texture/roller-2-white.gif";
 import ForegroundLeft from "@/assets/images/great_wall_of_china/foreground-left.png";
 import ForegroundRight from "@/assets/images/great_wall_of_china/foreground-right.png";
 import Sun from "@/assets/images/great_wall_of_china/sun.png";
-import Cloud from "@/assets/images/_common/cloud-white.svg";
+import Cloud from "@/assets/images/common/cloud-white.svg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import React, { useImperativeHandle, useRef } from "react";

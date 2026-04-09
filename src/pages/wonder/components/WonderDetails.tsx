@@ -1,8 +1,8 @@
-import Roller2 from "@/assets/images/_common/texture/roller-2-white.gif";
-import CompassFull from "@/assets/images/_common/compass-full.svg";
-import IntroMask1 from "@/assets/images/_common/intro-mask-1.png";
-import IntroMask2 from "@/assets/images/_common/intro-mask-2.png";
-import IntroMask3 from "@/assets/images/_common/intro-mask-3.png";
+import Roller2 from "@/assets/images/common/texture/roller-2-white.gif";
+import CompassFull from "@/assets/images/common/compass-full.svg";
+import IntroMask1 from "@/assets/images/common/intro-mask-1.png";
+import IntroMask2 from "@/assets/images/common/intro-mask-2.png";
+import IntroMask3 from "@/assets/images/common/intro-mask-3.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";

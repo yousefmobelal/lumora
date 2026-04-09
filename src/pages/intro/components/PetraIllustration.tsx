@@ -2,7 +2,7 @@ import Moon from "@/assets/images/petra/moon.png";
 import Petra from "@/assets/images/petra/petra.png";
 import ForegroundLeft from "@/assets/images/petra/foreground-left.png";
 import ForegroundRight from "@/assets/images/petra/foreground-right.png";
-import Cloud from "@/assets/images/_common/cloud-white.svg";
+import Cloud from "@/assets/images/common/cloud-white.svg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useImperativeHandle, useRef } from "react";

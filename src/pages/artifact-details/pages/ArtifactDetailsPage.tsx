@@ -3,9 +3,9 @@ import { useQuery } from "@tanstack/react-query";
 import { useLocation, useNavigate } from "react-router-dom";
 import { getArtifact } from "../api/get-artifact";
 import { QueryBoundary } from "@/components/shared/QueryBoundary";
-import CompassFull from "@/assets/images/_common/compass-full.svg";
+import CompassFull from "@/assets/images/common/compass-full.svg";
 import ArtifactDetailsInfoRow from "../components/ArtifactDetailsInfoRow";
-import PreviousArrow from "@/assets/images/_common/icons/icon-back.png";
+import PreviousArrow from "@/assets/images/common/icons/icon-back.png";
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
