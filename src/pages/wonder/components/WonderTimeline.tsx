@@ -68,8 +68,8 @@ const WonderTimeline = () => {
   }, []);
 
   return (
-    <div className="bg-black h-screen w-full px-5 pt-10 md:ps-50 md:pe-10 md:pt-20 overflow-hidden">
-      <div className="grid h-full grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="bg-black h-screen w-full px-5 pt-10 md:ps-50 md:pe-10 md:pt-20 overflow-hidden max-lg:overflow-y-auto">
+      <div className="grid h-full grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="col-center">
           <div
             id="wonder-img"
@@ -94,7 +94,7 @@ const WonderTimeline = () => {
 
         <div
           id="timeline"
-          className="timeline-scroll overflow-x-hidden flex h-full flex-col gap-5 overflow-y-auto pr-2 pb-20 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-500 hover:scrollbar-thumb-gray-400 scrollbar-thumb-rounded-full"
+          className="timeline-scroll lg:overflow-x-hidden max-lg:pb-30 flex h-full flex-col gap-5 lg:overflow-y-auto pr-2 pb-20 lg:scrollbar-thin lg:scrollbar-track-transparent lg:scrollbar-thumb-gray-500 lg:hover:scrollbar-thumb-gray-400 lg:scrollbar-thumb-rounded-full"
         >
           {Object.entries(wonder.events).map(([yearStr, description], i) => {
             const year = parseInt(yearStr);

@@ -123,19 +123,28 @@ const WonderArtifacts = () => {
       />
       <div className="absolute top-0 h-screen w-full bg-linear-to-t from-black via-black/50 to-transparent" />
 
-      <div className="absolute left-1/2 top-[210%] -translate-x-1/2 -translate-y-1/2 w-[150%] aspect-square bg-off-white/80 rounded-full">
-        <div className="flex gap-15">
+      <div className="absolute left-1/2 top-1/2  -translate-x-1/2 w-[150vmax] aspect-square bg-off-white/80 rounded-full">
+        <div className="flex gap-15 absolute left-1/2 -translate-x-1/2">
           {Array.from({ length: TOTAL_ITEMS }).map((_, index) => {
             const isCenter =
               (firstHighlightIdIndex + 2) % TOTAL_ITEMS === index;
+            const isPrevToCenter =
+              (firstHighlightIdIndex + 1) % TOTAL_ITEMS === index;
+            const isNextToCenter =
+              (firstHighlightIdIndex + 3) % TOTAL_ITEMS === index;
             const artifactId = highlights[index].artifactId;
             return (
               <div
                 key={index}
                 id={`artifact-highlight-${index}`}
-                className="size-30 rounded-full bg-transparent border border-white p-2 relative bottom-0 left-[29%] "
+                className="size-30 rounded-full bg-transparent border border-white p-2 relative bottom-0"
                 onClick={function () {
-                  if (isCenter) {
+                  if (isPrevToCenter) {
+                    animate(-1);
+                    animate(-1);
+                  } else if (isNextToCenter) {
+                    animate(1);
+                  } else if (isCenter) {
                     navigate(
                       paths.artifactDetails.getHref(wonderId, artifactId),
                       {
@@ -151,7 +160,10 @@ const WonderArtifacts = () => {
                 }}
                 style={{
                   bottom: getBottomPosition(index),
-                  cursor: isCenter ? "pointer" : "default",
+                  cursor:
+                    isCenter || isPrevToCenter || isNextToCenter
+                      ? "pointer"
+                      : "default",
 
                   ...(index === 2 ? MIDDLE_CARD : {}),
                 }}
@@ -169,7 +181,7 @@ const WonderArtifacts = () => {
 
       <h2
         ref={titleRef}
-        className="absolute left-1/2 bottom-1/6 -translate-x-1/2 text-3xl text-black font-tenor"
+        className="absolute left-1/2 bottom-1/4 md:bottom-1/6 w-[70%] line-clamp-2 -translate-x-1/2 text-lg md:text-3xl text-black font-tenor"
       >
         {highlights[(firstHighlightIdIndex + 2) % TOTAL_ITEMS].title}
       </h2>
@@ -178,7 +190,7 @@ const WonderArtifacts = () => {
         Artifacts
       </h1>
 
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 text-black">
+      <div className="absolute bottom-25 md:bottom-10 left-1/2 -translate-x-1/2 flex gap-3 text-black">
         <button
           onClick={() => animate(-1)}
           className="bg-white/20 px-4 py-2 rounded text-sm backdrop-blur"
